@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account | MedWare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="register-container">
+        <!-- Register -->
+        <div class="register-form">
+            <h2>Create an account</h2>
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+
+            <!-- Username -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <span class="error-message">*This field is required</span>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+                <span class="error-message">*This field is required</span>
+            </div>
+
+            <!-- Password  -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
+                <p class="password-info">Use 8 or more characters with a mix of letters and numbers</p>
+                <span class="error-message">*This field is required</span>
+            </div>
+
+            <!-- Sign Up  -->
+            <button class="sign-up-button">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>

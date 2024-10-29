@@ -847,3 +847,144 @@ footer {
   background-color: #c74d4d;
 }
 
+
+
+/*profile*/
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #F6F6F6 50%,  #FADBD8 50%);
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  border-bottom: 1px solid C8CBD9; /* Tambahkan garis bawah */
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #E74C3C;
+  font-weight: bold;
+}
+
+.dashboard {
+  font-size: 1rem;
+  color: #333333;
+  margin-left: 2px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-icon,
+.icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+}
+
+/* Profile Section */
+.profile-section {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  width: 90%;
+ 
+  height: 80vh; /* Panjang penuh layar */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content {
+  display: flex;
+  gap: 7rem;
+  align-items: flex-start;
+}
+
+.profile-pic {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150%;
+}
+
+.edit-pic-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #E74C3C;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 50%;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.profile-form {
+  flex-grow: 1;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 0.rem;
+  font-weight: bold;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #E74C3C;
+  border-radius: 5px;
+}
+
+.save-btn {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}

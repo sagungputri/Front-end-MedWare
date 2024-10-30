@@ -850,12 +850,6 @@ footer {
 
 
 /*profile*/
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Container */
 .container {
@@ -999,3 +993,6 @@ footer {
   color: #333333;
   margin-bottom: 1rem; /* Jarak antara judul dan gambar profil */
 }
+
+
+

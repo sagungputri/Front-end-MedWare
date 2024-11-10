@@ -1,0 +1,51 @@
+def print_menu():
+    print("""=== MODUL MATEMATIKA ===
+1. Hitung Luas Lingkaran
+2. Hitung Luas Persegi Panjang
+3. Hitung Luas Permukaan Tabung
+0. Keluar""")
+
+# validasi input harus bertipe data int
+def input_int(prompt):
+    try:
+        var = int(input(prompt))
+        return var
+    except Exception:
+        return input_int(prompt)
+    
+PHI = 22/7
+
+def hitung_luas_lingkaran(r):
+    return PHI * pow(r, 2)
+
+def hitung_luas_persegi_panjang(p, l):
+    return p * l
+
+def hitung_luas_permukaan_tabung(t, r):
+    return 2 * PHI * r * (r + t)
+
+pilihan = -1
+while pilihan != 0:
+    print_menu()
+    pilihan = input_int(">> ")
+
+    match pilihan:
+        case 1:
+            jari = input_int("Masukkan jari-jari >> ")
+            hasil = hitung_luas_lingkaran(jari)
+            print(f"Hasil: {hasil}" )
+        case 2:
+            panjang = input_int("Masukkan panjang >> ")
+            tinggi = input_int("Masukkan tinggi >> ")
+            hasil = hitung_luas_persegi_panjang(panjang, tinggi)
+            print(f"Hasil: {hasil}" )
+        case 3:
+            tinggi = input_int("Masukkan tinggi >> ")
+            jari = input_int("Masukkan jari-jari >> ")
+            hasil = hitung_luas_permukaan_tabung(tinggi, jari)
+            print(f"Hasil: {hasil}" )
+        case 0:
+            print("Terima kasih telah menggunakan program ini")
+            print("sama sama")
+
+    print()

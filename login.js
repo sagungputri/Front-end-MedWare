@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return password.length >= 6; // Password minimal 6 karakter
     }
 
-    // Fungsi untuk memvalidasi semua input secara keseluruhan
+
     function validateForm() {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
 
-        hideError(); // Jika semua validasi lolos
+        hideError(); 
         return true;
     }
 

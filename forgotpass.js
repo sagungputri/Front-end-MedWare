@@ -15,7 +15,6 @@ document.getElementById('forgotPasswordForm').addEventListener('submit', functio
     }
 });
 
-
 function simulateEmailSending(email) {
 
     const registeredEmails = ['user@example.com', 'admin@example.com']; 

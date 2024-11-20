@@ -22,25 +22,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return password.length >= 6; // Password minimal 6 karakter
     }
 
-    loginButton.addEventListener('click', (event) => {
-        event.preventDefault();
+    // Fungsi untuk memvalidasi semua input secara keseluruhan
+    function validateForm() {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
-        if (email === '' || password === '') {
-            showError('*This field is required');
-            return;
+
+        if (email === '') {
+            showError('*Email field is required');
+            return false;
         }
+
         if (!validateEmail(email)) {
             showError('*Please enter a valid email address');
-            return;
+            return false;
         }
+
+        if (password === '') {
+            showError('*Password field is required');
+            return false;
+        }
+
         if (!validatePassword(password)) {
-            showError('*Please enter a valid password');
-            return;
+            showError('*Password must be at least 6 characters long');
+            return false;
         }
-        hideError(); 
-        simulateLogin(email, password);
+
+        hideError(); // Jika semua validasi lolos
+        return true;
+    }
+
+    loginButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (validateForm()) {
+            simulateLogin(emailInput.value.trim(), passwordInput.value.trim());
+        }
     });
+
     function simulateLogin(email, password) {
         setTimeout(() => {
             alert('Login berhasil!');

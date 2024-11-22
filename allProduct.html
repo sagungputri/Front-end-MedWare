@@ -5,9 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medware Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /* Tambahkan CSS agar konten bisa discroll */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #E63946;
+        }
+
+        .navbar nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navbar nav a.active {
+            color: #E63946;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-bar button {
+            padding: 0.5rem;
+            background-color: #E63946;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+
+        .content {
+            padding: 2rem;
+            overflow-y: auto;
+            height: calc(100vh - 64px); /* Menyesuaikan tinggi viewport */
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .product-item p {
+            margin: 0.5rem 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-item span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .product-item button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #E63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-item button:hover {
+            background-color: #D62828;
+        }
+    </style>
 </head>
 <body>
-    
     <header class="navbar">
         <div class="logo">Medware</div>
         <nav>
@@ -24,11 +139,9 @@
         </div>
     </header>
     <main class="content">
-        
-        
         <section class="recent-products">
-        
             <div class="product-list">
+                <!-- Produk di sini -->
                 <div class="product-item">
                     <img src="img/img-product/panadol.png" alt="Panadol">
                     <p>Panadol</p>
@@ -65,6 +178,21 @@
                     <span>Added: 10-01-2024</span>
                     <button>Details</button>
                 </div>
+                <!-- Produk tambahan -->
+                <div class="product-item">
+                    <img src="img/img-product/amoxsan.png" alt="Amoxsan">
+                    <p>Amoxsan</p>
+                    <span>Added: 09-07-2024</span>
+                    <button>Details</button>
+                </div>
+                <div class="product-item">
+                    <img src="img/img-product/paracetamol.png" alt="Paracetamol">
+                    <p>Paracetamol</p>
+                    <span>Added: 15-05-2024</span>
+                    <button>Details</button>
+                </div>
             </div>
-          
         </section>
+    </main>
+</body>
+</html>

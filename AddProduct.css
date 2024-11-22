@@ -1,51 +1,100 @@
-def print_menu():
-    print("""=== MODUL MATEMATIKA ===
-1. Hitung Luas Lingkaran
-2. Hitung Luas Persegi Panjang
-3. Hitung Luas Permukaan Tabung
-0. Keluar""")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-# validasi input harus bertipe data int
-def input_int(prompt):
-    try:
-        var = int(input(prompt))
-        return var
-    except Exception:
-        return input_int(prompt)
-    
-PHI = 22/7
+body {
+    background-color: #F3F4F6;
+    color: #333;
+    padding: 2rem;
+}
 
-def hitung_luas_lingkaran(r):
-    return PHI * pow(r, 2)
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
 
-def hitung_luas_persegi_panjang(p, l):
-    return p * l
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
-def hitung_luas_permukaan_tabung(t, r):
-    return 2 * PHI * r * (r + t)
+header h1 {
+    color: #FF6B6B;
+}
 
-pilihan = -1
-while pilihan != 0:
-    print_menu()
-    pilihan = input_int(">> ")
+header .dashboard-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #FF6B6B;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+}
 
-    match pilihan:
-        case 1:
-            jari = input_int("Masukkan jari-jari >> ")
-            hasil = hitung_luas_lingkaran(jari)
-            print(f"Hasil: {hasil}" )
-        case 2:
-            panjang = input_int("Masukkan panjang >> ")
-            tinggi = input_int("Masukkan tinggi >> ")
-            hasil = hitung_luas_persegi_panjang(panjang, tinggi)
-            print(f"Hasil: {hasil}" )
-        case 3:
-            tinggi = input_int("Masukkan tinggi >> ")
-            jari = input_int("Masukkan jari-jari >> ")
-            hasil = hitung_luas_permukaan_tabung(tinggi, jari)
-            print(f"Hasil: {hasil}" )
-        case 0:
-            print("Terima kasih telah menggunakan program ini")
-            print("sama sama")
+.add-product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
-    print()
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+}
+
+.image-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+}
+
+.image-upload input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn-add-product {
+    grid-column: span 2;
+    padding: 0.8rem 2rem;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-add-product:hover {
+    background-color: #E55B5B;
+}

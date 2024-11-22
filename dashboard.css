@@ -5,11 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #F3F4F6;
-    color: #333;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -17,7 +12,17 @@ body {
     padding: 1rem 2rem;
     background-color: #FFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Pastikan navbar tetap di atas */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Supaya navbar tetap di atas elemen lain */
 }
+
+body {
+    padding-top: 70px; /* Berikan jarak untuk konten agar tidak menumpuk */
+}
+
 
 .navbar .logo {
     font-size: 1.5rem;

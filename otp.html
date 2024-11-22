@@ -30,6 +30,16 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script> 
+    <!-- Tambahkan JavaScript langsung di bawah ini -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const verifyButton = document.querySelector('.verify-button');
+
+            verifyButton.addEventListener('click', () => {
+                // Logika sederhana untuk mengarahkan ke halaman success
+                window.location.href = 'succes.html';
+            });
+        });
+    </script> 
 </body>
 </html>

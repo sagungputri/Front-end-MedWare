@@ -17,29 +17,74 @@
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" placeholder="Enter username">
-                <span class="error-message">*This field is required</span>
+                <span class="error-message" id="username-error">*Username field is required</span>
             </div>
 
             <!-- Email -->
             <div class="input-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" placeholder="Enter your email address">
-                <span class="error-message">*This field is required</span>
+                <span class="error-message" id="email-error">*Email field is required</span>
             </div>
 
-            <!-- Password  -->
+            <!-- Password -->
             <div class="input-group">
                 <label for="password">Password</label>
                 <div class="password-wrapper">
                     <input type="password" id="password" placeholder="Enter password">
                 </div>
                 <p class="password-info">Use 8 or more characters with a mix of letters and numbers</p>
-                <span class="error-message">*This field is required</span>
+                <span class="error-message" id="password-error">*Password field is required</span>
             </div>
 
-            <!-- Sign Up  -->
-            <button class="sign-up-button">Sign Up</button>
+            <!-- Sign Up -->
+            <button class="sign-up-button" onclick="validateForm()">Sign Up</button>
         </div>
     </div>
+
+    <script>
+        function validateForm() {
+            // Ambil nilai input
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Ambil elemen pesan error
+            const usernameError = document.getElementById("username-error");
+            const emailError = document.getElementById("email-error");
+            const passwordError = document.getElementById("password-error");
+
+            let isValid = true;
+
+            // Validasi Username
+            if (!username) {
+                usernameError.style.display = "block";
+                isValid = false;
+            } else {
+                usernameError.style.display = "none";
+            }
+
+            // Validasi Email
+            if (!email) {
+                emailError.style.display = "block";
+                isValid = false;
+            } else {
+                emailError.style.display = "none";
+            }
+
+            // Validasi Password
+            if (!password) {
+                passwordError.style.display = "block";
+                isValid = false;
+            } else {
+                passwordError.style.display = "none";
+            }
+
+            // Jika semua validasi lolos, arahkan ke halaman otp.html
+            if (isValid) {
+                window.location.href = "otp.html";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -5,6 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
+body {
+    background-color: #FFF;
+    color: #333;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -12,17 +17,7 @@
     padding: 1rem 2rem;
     background-color: #FFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Pastikan navbar tetap di atas */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Supaya navbar tetap di atas elemen lain */
 }
-
-body {
-    padding-top: 70px; /* Berikan jarak untuk konten agar tidak menumpuk */
-}
-
 
 .navbar .logo {
     font-size: 1.5rem;
@@ -98,7 +93,7 @@ body {
 }
 
 .card.red {
-    background-color: #FF6666;
+    background-color: #FFF1F1;
 }
 
 .card.blue {
@@ -106,7 +101,8 @@ body {
 }
 
 .card.purple {
-    background-color: #B741A4;
+    background-color: #FFF1F1
+    ;
 }
 
 .card h2 {
@@ -124,61 +120,4 @@ body {
     right: 10px;
     width: 160px;
     height: auto;
-}
-
-.recent-products h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.product-list {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-}
-
-.product-item {
-    background-color: #FFF;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-    width: 150px;
-}
-
-.product-item img {
-    width: 70%;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-}
-
-.product-item p {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.product-item span {
-    font-size: 0.8rem;
-    color: #777;
-}
-
-.product-item button {
-    margin-top: 0.5rem;
-    padding: 0.3rem 1rem;
-    background-color: #FF6B6B;
-    color: #FFF;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-.view-all {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
